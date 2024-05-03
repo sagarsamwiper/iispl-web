@@ -1,0 +1,19 @@
+version: '3.6'
+services:
+  frontend:
+    image: docker.frontend
+    container_name: frontend-container
+    ports:
+      - "3000:3000"
+      - "85:80"
+    restart: always
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    # volumes:
+    #   - qaaro-data
+    networks:
+      - lb-net
+networks:
+  lb-net:
+    name: lb-net
+    external: true
