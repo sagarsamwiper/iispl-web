@@ -1,13 +1,20 @@
-#Node
-FROM node:18
+# Stage 1: Install dependencies
+FROM node:18 AS dependencies
 WORKDIR /app
 COPY package.json .
 RUN npm install
-RUN npm install -g serve
+
+# Stage 2: Build the application
+FROM dependencies AS build
+WORKDIR /app
 COPY . .
 RUN npm run build
-ENTRYPOINT [ "npm", "start" ]
 
-#Nginx
-#FROM nginx:alpine
-#COPY --from=build /app/build /usr/share/nginx/html
+# Stage 3: Final stage
+FROM node:18
+WORKDIR /app
+COPY --from=build /app/build ./build
+RUN npm install -g serve
+
+# Set the command to run on container start
+CMD ["npm", "start"]
