@@ -43,7 +43,7 @@ const AboutSectionOne = () => {
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
                     <List text="System Administrators" />
                     <List text=" Web Administrators" />
-                    <List text="eam of Web Designers " />
+                    <List text="Team of Web Designers " />
                   </div>
                 </div>
               </div>
@@ -52,13 +52,13 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
                 <Image
-                  src="/images/about/about-image.svg"
+                  src="/images/image3.JPG"
                   alt="about-image"
                   fill
                   className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
                 />
                 <Image
-                  src="/images/about/about-image-dark.svg"
+                  src="/images/image3.JPG"
                   alt="about-image"
                   fill
                   className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
