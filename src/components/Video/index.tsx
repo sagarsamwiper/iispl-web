@@ -13,39 +13,38 @@ const Video = () => {
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="We are ready to help"
+          title="OUR TEAM"
           paragraph="We're here, ready and eager to assist you with all your financial needs. Reach out to us for personalized support and expert guidance every step of the way."
           center
           mb="80px"
         />
 
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
+        <div className="-mx-4 flex flex-wrap items-center">
+          {/* Image on the left */}
+          <div className="w-full md:w-1/2 px-4">
             <div
               className="mx-auto max-w-[770px] overflow-hidden rounded-md"
               data-wow-delay=".15s"
             >
               <div className="relative aspect-[77/40] items-center justify-center">
                 <Image src="/images/coner.JPG" alt="video image" fill />
-                {/* <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center">
-                  <button
-                    aria-label="video play button"
-                    onClick={() => setOpen(true)}
-                    className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
-                  >
-                    <svg
-                      width="16"
-                      height="18"
-                      viewBox="0 0 16 18"
-                      className="fill-current"
-                    >
-                      <path d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48112 15.5 9.86602L2 17.6603C1.33333 18.0452 0.499999 17.564 0.499999 16.7942L0.5 1.20577C0.5 0.43597 1.33333 -0.0451549 2 0.339745L15.5 8.13397Z" />
-                    </svg>
-                  </button>
-                </div> */}
               </div>
             </div>
           </div>
+
+          {/* Content on the right */}
+          <div className="w-full md:w-1/2 px-4 mt-4 md:mt-0">
+            <div className="text-white">
+              <p className="mb-4 ml-8 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">Well trained and expertised teams from different locations:</p>
+              <ul className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed" style={{ listStyle: 'none', paddingLeft: '1em' }}>
+                <li style={{ position: 'relative' }}>• Bengaluru Team</li>
+                <li style={{ position: 'relative' }}>• Tumkur Team</li>
+                <li style={{ position: 'relative' }}>• Bagalkot Team</li>
+                <li style={{ position: 'relative' }}>• Davanagere Team</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </div>
 

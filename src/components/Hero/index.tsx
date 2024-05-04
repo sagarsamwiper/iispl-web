@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="container">
           <div className="mx-auto max-w-[800px] text-center">
             <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-              Intellectual Info Solutions Pvt Ltd (IISPL)
+              INTELLECTUAL INFO SOLUTIONS Pvt Ltd (IISPL)
             </h1>
             <p className="mb-12 text-base leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
               Empowering Business through Innovative IT
@@ -161,7 +161,7 @@ const Hero = () => {
 
         </div>
         <div className="absolute top-20 left-0 z-[-1] opacity-30 lg:opacity-100">
-        <Globe />
+          {/* <Globe /> */}
           <svg
             width="364"
             height="201"
