@@ -1,12 +1,20 @@
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
 import featuresData from "./featuresData";
+import Image from "next/image";
 
 const Features = () => {
   return (
     <>
-      <section id="features" className="py-16 md:py-20 lg:py-28">
-        <div className="container">
+      <section id="features" className="py-16 md:py-20 lg:py-28" style={{ position: "relative" }}>
+      <Image
+          src="/images/home1.JPG"
+          alt="Background Image"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+        <div className="container relative z-10">
           <SectionTitle
             title="VALUE ADDED SERVICES"
             paragraph="Empowering your banking experience with innovative Value Added Services."
