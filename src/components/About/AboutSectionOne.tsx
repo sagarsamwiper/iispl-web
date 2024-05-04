@@ -1,68 +1,71 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 
-const checkIcon = (
-  <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
-    <path d="M5.8535 12.6631C5.65824 12.8584 5.34166 12.8584 5.1464 12.6631L0.678505 8.1952C0.483242 7.99994 0.483242 7.68336 0.678505 7.4881L2.32921 5.83739C2.52467 5.64193 2.84166 5.64216 3.03684 5.83791L5.14622 7.95354C5.34147 8.14936 5.65859 8.14952 5.85403 7.95388L13.3797 0.420561C13.575 0.22513 13.8917 0.225051 14.087 0.420383L15.7381 2.07143C15.9333 2.26669 15.9333 2.58327 15.7381 2.77854L5.8535 12.6631Z" />
-  </svg>
-);
-
 const AboutSectionOne = () => {
-  const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
-        {checkIcon}
-      </span>
+  const TableHeader = ({ text }) => (
+    <th className="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
       {text}
-    </p>
+    </th>
+  );
+
+  const TableRow = ({ slNo, financialYear, formNo, index }) => (
+    <tr className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+      <td className="px-6 py-4 whitespace-nowrap">
+        <div className="text-sm text-gray-900">{slNo}</div>
+      </td>
+      <td className="px-6 py-4 whitespace-nowrap">
+        <div className="text-sm text-gray-900">{financialYear}</div>
+      </td>
+      <td className="px-6 py-4 whitespace-nowrap">
+        <div className="text-sm text-gray-900">{formNo}</div>
+      </td>
+      <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+      <a href={`/pdfs/${formNo}.pdf`} download className="text-indigo-600 hover:text-indigo-900">
+          Download
+        </a>
+      </td>
+    </tr>
   );
 
   return (
-    <section id="about" className="pt-16 md:pt-20 lg:pt-28">
-      <div className="container">
+    <section id="about" className="pt-16 md:pt-20 lg:pt-28 relative">
+      <Image
+        src="/images/about.avif"
+        alt="Background Image"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+      />
+      <div className="container relative z-10">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
+              <SectionTitle
+                title="About Us"
+                paragraph=""
+                mb="44px"
+              />
               <SectionTitle
                 title="Intellectual Info Solutions Pvt Ltd (IISPL)"
                 paragraph="Here we redefine banking with cutting-edge Value Added Services tailored to elevate your financial journey. Discover a seamless blend of convenience, innovation, and personalized solutions designed to enrich your banking experience. Join us and unlock a new era of banking excellence."
                 mb="44px"
               />
-
-              <div
-                className="mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
-              >
-                <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Enterprise information architects" />
-                    <List text="Project managers" />
-                    <List text="Database Administrators" />
-                  </div>
-
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="System Administrators" />
-                    <List text=" Web Administrators" />
-                    <List text="Team of Web Designers " />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full px-4 lg:w-1/2">
-              <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
-                <Image
-                  src="/images/image3.JPG"
-                  alt="about-image"
-                  fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
-                />
-                <Image
-                  src="/images/image3.JPG"
-                  alt="about-image"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
-                />
+              <div className="overflow-hidden border border-gray-200 rounded-lg">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <TableHeader text="Sl No" />
+                      <TableHeader text="Financial Year" />
+                      <TableHeader text="Form No" />
+                      <TableHeader text="Download" />
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <TableRow slNo="1" financialYear="2019-2020" formNo="FORM NO. MGT-7" index={0} />
+                    <TableRow slNo="2" financialYear="2020-2021" formNo="FORM NO. MGT-7" index={1} />
+                    {/* Add more rows as needed */}
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -73,3 +76,8 @@ const AboutSectionOne = () => {
 };
 
 export default AboutSectionOne;
+
+
+
+// <TableRow slNo="1" financialYear="2019-2020" formNo="FORM NO. MGT-7" />
+// <TableRow slNo="2" financialYear="2020-2021" formNo="FORM NO. MGT-7" />
