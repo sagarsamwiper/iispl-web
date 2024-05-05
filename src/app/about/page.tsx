@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <>
-      <Breadcrumb
+      {/* <Breadcrumb
         pageName="About Us"
         description="IISPL is formed with the mission of bringing cost-effective, efficient and high quality services in Information infrastructure."
-      />
+      /> */}
       <AboutSectionOne />
       <AboutSectionTwo />
     </>
