@@ -59,7 +59,7 @@ const featuresData: Feature[] = [
     ),
     title: "ATM Interface with E-Commerce, RUPAY Debit.",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "RUPAY Debit integration enables users to perform online transactions directly from the ATM using their RUPAY debit cards.",
   },
   {
     id: 1,
