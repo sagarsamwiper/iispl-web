@@ -6,14 +6,14 @@ import Image from "next/image";
 const Features = () => {
   return (
     <>
-      <section id="features" className="py-16 md:py-20 lg:py-28" style={{ position: "relative" }}>
-      <Image
-          src="/images/home1.JPG"
+      <section id="features" className="py-16 md:py-20 lg:py-28 bg-gradient-to-b from-black to-gray-900" style={{ position: "relative" }}>
+      {/* <Image
+          src="/images/image2.JPG"
           alt="Background Image"
           layout="fill"
           objectFit="cover"
           quality={100}
-        />
+        /> */}
         <div className="container relative z-10">
           <SectionTitle
             title="VALUE ADDED SERVICES"

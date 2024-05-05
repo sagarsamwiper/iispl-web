@@ -6,22 +6,22 @@ const NewsLatterBox = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="relative z-10 rounded-sm bg-white p-8 shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
+    <div className="relative z-10 rounded-2xl bg-white p-8 shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
       <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
         Or reach out to our office centers
       </h3>
-      <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
+      <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-gray-400 dark:border-white dark:border-opacity-25">
         &quot;Visit our office centers and connect with our dedicated team for personalized assistance and expert advice tailored to your financial needs.&quot;
       </p>
 
-      <p className="mb-1  border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
+      <p className="mb-1  border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-gray-400 dark:border-white dark:border-opacity-25">
         Address
         Bengaluru Office:
         # 896/25/3, 1st ‘B’ Main Road, Mahalakshmi Layout,
         Bengaluru – 560 086.
       </p>
 
-      <p className="mb-1 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
+      <p className="mb-1 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-gray-400 dark:border-white dark:border-opacity-25">
         Tumakuru Office:
         1st Floor, G N Towers, Opp NEPS, B.H Road,
         Tumakuru – 572 103.

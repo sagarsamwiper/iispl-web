@@ -17,8 +17,8 @@ const Hero = () => {
           quality={100}
         />
         <div className="container relative z-10">
-          <div className="mx-auto max-w-[800px] text-center">
-            <h1 className="mb-5 text-3xl font-bold font-serif leading-tight text-black dark:text-black sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+          <div className="mx-auto max-w-[850px] text-center">
+            <h1 className="mb-5 text-3xl font-bold font-serif leading-tight text-black dark:text-blue-900 sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
               INTELLECTUAL INFO SOLUTIONS Pvt Ltd (IISPL)
             </h1>
             <p className="mb-12 text-base leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
